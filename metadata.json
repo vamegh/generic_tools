@@ -1,0 +1,50 @@
+{
+  "name": "vamegh-generic_tools",
+  "version": "0.0.1",
+  "author": "Vamegh Hedyati",
+  "summary": "module containing Generic Puppet Tools",
+  "license": "Apache Version 2.0",
+  "source": "https://github.com/vamegh/generic_tools",
+  "project_page": "https://github.com/vamegh/generic_tools",
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "5",
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "5",
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "OracleLinux",
+      "operatingsystemrelease": [
+        "5",
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "Scientific",
+      "operatingsystemrelease": [
+        "5",
+        "6",
+        "7"
+      ]
+    }
+  ],
+  "requirements": [
+  ],
+  "description": "Various Custom tools for baselining servers -- all hiera dependant",
+  "dependencies": [
+    {"name":"puppetlabs/stdlib","version_requirement":">= 2.4.0 < 5.0.0"},
+    {"name":"puppetlabs/concat","version_requirement":">= 1.1.1 < 2.0.0"}
+  ]
+}
