@@ -1,6 +1,6 @@
 {
   "name": "vamegh-generic_tools",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Vamegh Hedyati",
   "summary": "module containing Generic Puppet Tools",
   "license": "Apache Version 2.0",
@@ -44,7 +44,8 @@
   ],
   "description": "Various Custom tools for baselining servers -- all hiera dependant",
   "dependencies": [
-    {"name":"puppetlabs/stdlib","version_requirement":">= 2.4.0 < 5.0.0"},
-    {"name":"puppetlabs/concat","version_requirement":">= 1.1.1 < 2.0.0"}
+    {"name":"puppetlabs/stdlib"},
+    {"name":"puppetlabs/concat"},
+    {"name":"saz/limits"}
   ]
 }

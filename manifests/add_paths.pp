@@ -1,8 +1,6 @@
 ###
 # module generic_tools::add_paths
 # v hedayati 2015
-# This may seem stupid but we can now just recurse through a
-# hiera hash and create all the paths.
 ###
 define generic_tools::add_paths (
   $path_name   = $title,
