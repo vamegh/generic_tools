@@ -1,7 +1,7 @@
 # add cron jobs in a generic define -- allows us to loop through a hiera hash
 # allows the data structure to be dumped into hiera control
 
-define cust_tools::add_cron (
+define generic_tools::add_cron (
   $uniq_name            = $title,
   $ensure               = '',
   $command              = '',

@@ -3,7 +3,7 @@
 # in puppet forge and none of them seem to handle group creation all that well
 # or independantly from user creation. so hence why this exists.
 
-define cust_tools::add_users (
+define generic_tools::add_users (
   $uniq_name            = $title,
   $user_name            = '',
   $ensure               = '',
@@ -180,7 +180,7 @@ define cust_tools::add_users (
   }
 
   if ("$ssh_auth_keys") {
-    create_resources('cust_tools::add_sshkeys', $ssh_auth_keys)
+    create_resources('generic_tools::add_sshkeys', $ssh_auth_keys)
   }
 }
 

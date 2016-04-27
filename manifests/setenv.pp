@@ -4,7 +4,7 @@
 #  https://forge.puppetlabs.com/puppetlabs/concat
 ##
 
-define cust_tools::setenv (
+define generic_tools::setenv (
   $uniq_name = $title,
   $env_name = '',
   $env_path = '/etc/profile.d/',

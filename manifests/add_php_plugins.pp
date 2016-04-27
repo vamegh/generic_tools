@@ -1,6 +1,6 @@
 ## A define to add multiple pear or pecl php plugins simultaneously, should be completely maneagable via hiera.
 
-define cust_tools::add_php_plugins (
+define generic_tools::add_php_plugins (
   $uniq_name            = $title,
   $pkg_name             = '',
   $discover             = false,

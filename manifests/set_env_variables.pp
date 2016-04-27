@@ -15,7 +15,6 @@ define generic_tools::set_env_variables (
   $value            = '',
   $set_facter       = true,
   $set_sysenv       = true,
-  $set_ipcenv       = true,
   $order            = '10',
 ) {
 
@@ -53,15 +52,6 @@ define generic_tools::set_env_variables (
   }
 
   if ($set_facter) {
-    if ($set_ipcenv) {
-      concat::fragment {
-        "custom_env_frag_${uniq_name}_sh":
-          target => "${custom_env_pwd}",
-          order => $order,
-          content => "export ${env_name}=${value}\nexport FACTER_${env_name}=${value}\n",
-      }
-    }
-
     if ($set_sysenv) {
       concat::fragment {
         "env_frag_${uniq_name}_sh":
@@ -71,15 +61,6 @@ define generic_tools::set_env_variables (
       }
     }
   } else {
-    if ($set_ipcenv) {
-      concat::fragment {
-        "custom_env_frag_${uniq_name}_sh":
-          target => "${custom_env_pwd}",
-          order => $order,
-          content => "export ${env_name}=${value}\n",
-      }
-    }
-
     if ($set_sysenv) {
       concat::fragment {
         "env_frag_${uniq_name}_sh":

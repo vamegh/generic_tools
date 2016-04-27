@@ -1,7 +1,7 @@
 # v hedayati 2015
 # simple user management tool.
 
-define cust_tools::add_sshkeys (
+define generic_tools::add_sshkeys (
   $uniq_name = $title,
   $user_name = '',
   $type      = '',
@@ -14,7 +14,7 @@ define cust_tools::add_sshkeys (
   }
 
   if ("$ssh_auth_keys") {
-    create_resources('cust_tools::add_sshkeys', $ssh_auth_keys)
+    create_resources('generic_tools::add_sshkeys', $ssh_auth_keys)
   }
 }
 

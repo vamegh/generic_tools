@@ -1,4 +1,4 @@
-define cust_tools::add_hosts (
+define generic_tools::add_hosts (
   $host_name    = $title,
   $ensure       = '',
   $comment      = '',
